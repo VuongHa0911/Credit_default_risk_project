@@ -155,6 +155,7 @@ The dataset has over 3 million records and does not have many missing values.
 
 Notebook - 07_previous_appliation.ipynb:
 In this notebook I analyzed the previous application dataset. The dataset has 15 continuous, 4 integer and 16 string fields as shown below:
+
 ![07_notebook_table1](https://user-images.githubusercontent.com/81556008/123532826-cf3eb380-d73a-11eb-8b71-19e302389c79.jpg)
 ![07_notebook_table2](https://user-images.githubusercontent.com/81556008/123532828-d06fe080-d73a-11eb-883a-1c52014a873f.jpg)
 ![07_notebook_table3](https://user-images.githubusercontent.com/81556008/123532829-d1a10d80-d73a-11eb-94c5-351b7d4bd1ed.jpg)
@@ -234,6 +235,7 @@ As mentioned above in the data exploration section many of the fields are highly
 In this notebook I analyze and pre-processed the application train and application test datasets' string or object types. To be more efficient I combined both datasets into one dataframe and added a filter to later separate them. The datasets have 16 string data types. Below I discuss the pre-processing task I performed for these datasets.
 
 After analyzing the string type fields I decided to remove the fields that had a null or missing rate greater than 10%. For the fields that had a null rate less than 10% I filled in the missing values with the most frequent value. My analysis began with 16 string type fields and at the end I was left with 11. These 11 fields will be treated as categorical features.
+
 ![03_notebook_pre_process_1](https://user-images.githubusercontent.com/81556008/123532906-90f5c400-d73b-11eb-925c-08d07fc7be56.jpg)
 
 ### Notebook - 04_bureau_data_analysis.ipynb:
@@ -290,8 +292,8 @@ As shown below the training dataset is highly unbalanced where the default class
 ![10_notebook_pre_process_1](https://user-images.githubusercontent.com/81556008/123532935-cb5f6100-d73b-11eb-9a07-c17de433e965.jpg)
 
 I created a stratified under-sampled dataset for the training dataset. I applied under-sampling so that the target class (0-non-defaults and 1-defaults) can be represented more equally. I decided to use under-sampling versus over-sampling because I have a large dataset. To perform the under-sampling I used sklearn's StratifiedShuffleSplit API. The AMT_ANNUITY field was used to create a category field that served as the stratifying class. In the new under-sampled dataset the default class make up 49.8% of the total as shown below:
-![10_notebook_pre_process_2](https://user-images.githubusercontent.com/81556008/123532946-d7e3b980-d73b-11eb-8306-3a65e0ef0c26.jpg)
 
+![10_notebook_pre_process_2](https://user-images.githubusercontent.com/81556008/123532946-d7e3b980-d73b-11eb-8306-3a65e0ef0c26.jpg)
 
 Finally, I normalized all the continuous fields and one-hot encoded all the categorical features. I also separated the final combined pre-processed training and testing datasets. The final normalized training set had 48,765 records and 283 column (including the SK_ID_CURR id field and TARGET field). The final normalized testing set had 48,744 records and 282 columns (including the SK_ID_CURR id field). The testing dataset does not a have TARGET field because we will use it to make a submission file for the Home Credit Default Risk competition.
 
