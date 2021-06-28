@@ -1,7 +1,6 @@
 from pandas._config.config import options
 from pandas.core.algorithms import value_counts
 import numpy as np
-import seaborn as sns
 import pandas as pd
 import streamlit as st
 from lightgbm import LGBMClassifier
