@@ -20,7 +20,7 @@ from visualize import *
 st.set_page_config(layout="wide")
 #import image
 
-intro = Image.open(r'C:\Users\Duong Nguyen\Desktop\final_project\home-credit-default-risk\EDA\Loan.jpg')
+intro = Image.open(r'![Loan](https://user-images.githubusercontent.com/81556008/123613501-aea35600-d82d-11eb-9640-79785e7869cb.jpg)')
 solution = Image.open(r'C:\Users\Duong Nguyen\Desktop\final_project\home-credit-default-risk\EDA\splution process.jpg')
 EDA_image = Image.open(r'C:\Users\Duong Nguyen\Desktop\final_project\home-credit-default-risk\EDA\exploring.png')
 miss_data = Image.open(r'C:\Users\Duong Nguyen\Desktop\final_project\home-credit-default-risk\EDA\missdata.jpg')
