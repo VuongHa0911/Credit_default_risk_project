@@ -3,7 +3,6 @@ from pandas.core.algorithms import value_counts
 import numpy as np
 import pandas as pd
 import streamlit as st
-from lightgbm import LGBMClassifier
 from sklearn.metrics import roc_curve
 from sklearn.metrics import roc_auc_score
 import plotly.express as px
